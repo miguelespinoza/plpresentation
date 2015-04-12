@@ -1,0 +1,121 @@
+### Introduction
+Go!
+Programming Languages
+14 Apr 2015
+
+Miguel Espinoza
+mespinozagil5692@g.fmarion.edu
+
+* Brief History
+- Designed by Google
+- Loosely derived from the C programming language
+- Compiled to machine code
+- Initially created for servers (backend programming language)
+- Ideas from Tony Hoare's CSP (Communicating Sequential Processes)
+- Built for concurrency
+
+########## Section 1: Basics of Go
+* Basic Concepts
+- Hello World
+.play code/hello.go /START OMIT/,/END OMIT/
+
+* Basic, Basic Concepts
+- Types
+.play code/basics.go /START OMIT/,/END OMIT/
+
+
+*
+.image img/notimpressed.jpg
+
+* Typing
+.image img/keyboard_typing.jpg
+.image img/programming_types.png
+
+* Type system
+- Declare-and-initialize construct
+   foo.Foo* myFoo = new (foo.Foo)
+
+   myFoo := new (foo.Foo)
+
+*  Type hierarchy
+- There is none
+- Types don't have to announce their relationship
+- Such as in Java or C++ with inheritance
+
+* Is Google an object-oriented language?
+.image img/yes_no.jpg
+
+* Method for int
+.play code/methodtype.go /START OMIT/,/END OMIT/
+
+* Interfaces
+- The lack of type hierarchy makes "objects" in Go feel much more lightweight
+- Benefits of Interfaces
+
+* Interface example
+- Formatted printing to any output, not just a file
+   func //HLFprintf(w io.Writer, format string, a ...interface{}) (n int, err error)
+- Buffered I/O
+   func (b *Reader) WriteTo(w io.Writer) (n int64, err error)
+- Image package generates compressed image files
+   func Encode(w io.Writer, m image.Image, o *Options) error
+
+- All these ideas stem from a single interface
+   type Writer interface {
+        Write(p []byte) (n int, err error)
+   }
+
+########## Section 2: Problems Go solves
+* Go Solving Problems
+
+* Concurrency
+
+* Go's philosophy
+Don't communicate by sharing memory, share memory by communicating
+
+* Goroutines
+- A function that can run concurrently with other functions.
+.play code/goroutine.go /START OMIT/,/END OMIT/
+
+* Goroutines
+.play code/goroutine1.go /START OMIT/,/END OMIT/
+
+* Goroutines
+.play code/goroutine2.go /START OMIT/,/END OMIT/
+
+* Goroutines vs Threads
+- We can't ignore the aged idea of threads for concurrency
+- 
+* Callbacks?
+.image img/callback.jpg
+
+* Channels
+* Select
+* Software Engineering
+* Disclaimer
+I'll be explaining Go on a more personal level
+
+* Go solves big problems
+
+* Learning Curve
+
+* Go is simple!
+- Ok, let's be serious simplicity does not mean easy but it means easier to understand or not complicated
+
+* Goal: build simple programs
+- Many programming languages are ignorant about software developers.
+- Go keeps in mind the real issues like solving a big problem, while maintaining the simplicity of the language to increase the quality of a system.
+
+* Simplicity isn't an option it's mandatory
+
+* Real-World Problems
+
+
+########## Section 3: Case Study
+* Let's use Go!
+
+* To top it off!
+Did i mention Go has a mascot? :)
+
+########## Section 4: Resources
+* Let's learn Go!
