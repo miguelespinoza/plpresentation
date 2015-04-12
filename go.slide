@@ -85,31 +85,60 @@ Don't communicate by sharing memory, share memory by communicating
 
 * Goroutines vs Threads
 - We can't ignore the aged idea of threads for concurrency
-- 
+- Goroutines are lightweight compared to threads in Java
+
 * Callbacks?
 .image img/callback.jpg
 
 * Channels
+.play code/channels.go /START OMIT/,/END OMIT/
+
 * Select
+.play code/select.go /START OMIT/,/END OMIT/
+
+* Select
+- Often used to implement a timeout
+   select {
+   case msg1 := <-c1:
+      fmt.Println(msg1)
+   case msg2 := <-c2:
+      fmt.Println(msg2)
+   case <- time.After(time.Second):
+      fmt.Println("timeout")
+   }
+
 * Software Engineering
 * Disclaimer
 I'll be explaining Go on a more personal level
 
 * Go solves big problems
+.image img/go_solving.png
 
-* Learning Curve
+* Learning Curve vs Productivity
+.image img/learning.png
 
 * Go is simple!
 - Ok, let's be serious simplicity does not mean easy but it means easier to understand or not complicated
+- Go has drawbacks
+- Different programming mentality
 
 * Goal: build simple programs
 - Many programming languages are ignorant about software developers.
 - Go keeps in mind the real issues like solving a big problem, while maintaining the simplicity of the language to increase the quality of a system.
 
 * Simplicity isn't an option it's mandatory
+The Go team chose early on to purposefully not give developers the freedom they might demand.  All general programming problems should have a unique and consistent solution.
 
-* Real-World Problems
+* Inspiration from some devs
+- Dave Cheney : http://dave.cheney.net/2015/03/08/simplicity-and-collaboration
+- Matt Almonetti : https://splice.com/blog/golang-improved-simplicity-reduced-maintenance/
 
+* Simplicity
+.image img/exceptions.png
+.image img/errors.png
+
+* Simplicity
+.image img/type-checking.png
 
 ########## Section 3: Case Study
 * Let's use Go!
