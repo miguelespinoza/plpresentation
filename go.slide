@@ -54,7 +54,7 @@ mespinozagil5692@g.fmarion.edu
 
 * Interface example
 - Formatted printing to any output, not just a file
-   func //HLFprintf(w io.Writer, format string, a ...interface{}) (n int, err error)
+   func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)
 - Buffered I/O
    func (b *Reader) WriteTo(w io.Writer) (n int64, err error)
 - Image package generates compressed image files
@@ -140,11 +140,55 @@ The Go team chose early on to purposefully not give developers the freedom they 
 * Simplicity
 .image img/type-checking.png
 
+#* Pair programming
+#.image img/pair.gif
+
+* Style errors
+.image img/messy_code.png
+
+* Style errors
+.image img/clean_code.png
+
 ########## Section 3: Case Study
 * Let's use Go!
 
+* REST API
+.code code/case1.go
+
+* REST API
+.code code/case2.go
+
+* REST API
+.code code/case3.go /START OMIT/,/END OMIT/
+
+* REST API
+.code code/case4.go
+
+##* REST API
+##.code code/case5.go
+
+* REST API
+.code code/case6.go
+
+* REST API
+.code code/case5.go
+## Run program
+
+* REST API
+.code code/case7.go
+
+* Let's learn Go!
+- golang.org/doc/
+- dave.cheney.net/2015/03/08/simplicity-and-collaboration
+- splice.com/blog/golang-improved-simplicity-reduced-maintenance/
+- thenewstack.io/make-a-restful-json-api-go/
+
+- gobyexample.com
+- golang.org/doc/effective_go.html
+- golang-book.com
+
 * To top it off!
-Did i mention Go has a mascot? :)
+- Did i mention Go has a mascot? :)
+.image img/gopher.jpg
 
 ########## Section 4: Resources
-* Let's learn Go!

@@ -11,7 +11,7 @@ func main() {
 	// START OMIT
 	go func() {
 		for {
-			c2 <- "from 1"
+			c1 <- "from 1"
 			time.Sleep(time.Second * 2)
 		}
 	}()
